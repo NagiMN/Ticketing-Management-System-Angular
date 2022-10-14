@@ -1,0 +1,38 @@
+
+<div class="form-fgroup row">
+
+    <label class="col-sm-2 col-form-label">Title:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Title"
+        placeholder="Enter ticket title...">
+    </div>
+<br><br>
+    <label class="col-sm-2 col-form-label">Category:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Category"
+        placeholder="Enter Category Name...">
+    </div>
+<br><br>
+    <label class="col-sm-2 col-form-label">CompUser:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="CompUser"
+        placeholder="Enter CompUser...">
+    </div>
+<br><br>
+    <label class="col-sm-2 col-form-label">Ticket Status:</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="TicketStatus"
+        placeholder="Enter Ticket Status...">
+    </div>
+</div>
+
+<br>
+
+<button (click)="addTicket()" *ngIf="ticket.TicketNum==0" class="btn btn-primary">
+    Add
+</button>
+
+<br>
+<button (click)="updateTicket()" *ngIf="ticket.TicketNum!=0" class="btn btn-primary">
+    Update
+</button>
